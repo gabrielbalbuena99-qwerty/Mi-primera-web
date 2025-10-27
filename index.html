@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yang's Kitchen</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<!-- ooooita tirando comentario tirando beef aasasd- -->
+ <!-- ooooita tirando comentario tirando beef no funcionaaaaaa- -->
+<body>
+    <!-- ================= HEADER ================= -->
+    <header class="fade-in">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="#inicio">
+                    <img src="img/logo_1.png" alt="Logo del restaurante">
+                </a>
+            </div>
+
+            <nav class="navbar" id="navbar">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#destacados">Destacados</a></li>
+                    <li><a href="#menu">Menú</a></li>
+                    <li><a href="#reservas">Reservas</a></li>
+                    <li><a href="#ubicacion">Ubicación</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+
+            <div class="hamburguesa" id="hamburguesa">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= BANNER ================= -->
+    <section id="inicio" class="banner fade-in">
+        <img src="img/inicio_1.png" alt="Banner principal del restaurante">
+        <div class="banner-texto">
+            <h1>Bienvenidos a Yang's Kitchen!</h1>
+            <p>Sabores auténticos, ingredientes frescos y cocina de autor.</p>
+        </div>
+    </section>
+
+    <!-- ================= DESTACADOS ================= -->
+    <section id="destacados" class="destacados fade-in">
+        <h2>Platos Destacados</h2>
+        <div class="platos-container">
+            <div class="plato fade-in">
+                <div class="img-container">
+                    <img src="img/plato_1.png" alt="Plato destacado 1">
+                </div>
+                <h3>Ravioles caseros</h3>
+                <p>Pasta fresca rellena de espinaca y ricotta. Servidos con salsa a elección y queso parmesano.</p>
+            </div>
+
+            <div class="plato fade-in">
+                <div class="img-container">
+                    <img src="img/plato_2.png" alt="Plato destacado 2">
+                </div>
+                <h3>Asado de Ternera</h3>
+                <p>Corte de vacío de ternera a la parrilla, con papas rústicas y reducción de vino Malbec.</p>
+            </div>
+
+            <div class="plato fade-in">
+                <div class="img-container">
+                    <img src="img/plato_3.png" alt="Plato destacado 3">
+                </div>
+                <h3>Desayuno Americano</h3>
+                <p>Tostadas, salchichas, huevos fritos y bacon crujiente.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= MENÚ ================= -->
+    <section id="menu" class="menu fade-in">
+        <h2>Menú</h2>
+        <div class="menu-categorias">
+            <div class="categoria fade-in">
+                <h3>Entradas</h3>
+                <ul>
+                    <li>Bruschettas - $2500</li>
+                    <li>Empanadas - $1800</li>
+                </ul>
+            </div>
+            <div class="categoria fade-in">
+                <h3>Platos principales</h3>
+                <ul>
+                    <li>Ravioles caseros - $4500</li>
+                    <li>Asado criollo - $7000</li>
+                </ul>
+            </div>
+            <div class="categoria fade-in">
+                <h3>Postres</h3>
+                <ul>
+                    <li>Flan casero - $2000</li>
+                    <li>Helado artesanal - $2500</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SOBRE NOSOTROS ================= -->
+    <section id="sobre-nosotros" class="sobre-nosotros fade-in">
+        <div class="imagenes-superiores">
+            <img src="img/body_1.png" alt="Imagen decorativa 1" class="img-cuadrada fade-in">
+            <img src="img/body_2.png" alt="Imagen decorativa 2" class="img-rectangular fade-in">
+        </div>
+
+        <div class="contenido-inferior">
+            <div class="logo-container fade-in">
+                <img src="img/logo_2.png" alt="Logo del restaurante" class="logo">
+            </div>
+
+            <div class="texto fade-in">
+                <h2>Sobre Nosotros</h2>
+                <p>
+                En Yang’s Kitchen nos esforzamos por obtener ingredientes locales, sostenibles y orgánicos siempre que es posible.
+                Trabajamos arduamente para conseguir ingredientes de primera calidad y cocinamos todo desde cero y con amor.
+                También hacemos todo lo posible por pagar a nuestros empleados salarios dignos (las propinas se reparten entre todos,
+                incluido el personal de cocina) y por reducir nuestra huella ambiental siempre que podemos.
+                En general, estos factores se traducen en precios más altos en el menú, pero esperamos que encuentres valor
+                y te sientas reconfortado al saber que nuestro objetivo es mejorar cada día en lo que es importante para nosotros.
+            </p>
+            </div>
+        </div>
+    </section>
+   <!-- ================= SECCIÓN FULLSCREEN ================= -->
+<section id="imagen-full" class="imagen-full fade-in">
+    <img src="img/body_3.png" alt="Imagen a pantalla completa">
+</section>
+
+    <!-- ================= RESERVAS ================= -->
+    <section id="reservas" class="reservas fade-in">
+        <h2>Reservas</h2>
+        <form id="formReservas">
+            <label for="tipo">Tipo de reserva:</label>
+            <select id="tipo" name="tipo">
+                <option value="comun">Común</option>
+                <option value="vip">VIP</option>
+            </select>
+
+            <label for="personas">Cantidad de personas:</label>
+            <input type="number" id="personas" name="personas" min="1" required>
+
+            <label for="dni">DNI:</label>
+            <input type="text" id="dni" name="dni" required>
+
+            <label for="nombre">Nombre y apellido:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="sena">Seña ($):</label>
+            <input type="number" id="sena" name="sena" required>
+
+            <button type="submit">Enviar reserva</button>
+        </form>
+    </section>
+
+    <!-- ================= INFORMACIÓN ADICIONAL ================= -->
+    <section id="informacion" class="informacion fade-in">
+        <div class="info-container">
+            <h2>Información adicional</h2>
+            <p><strong>Horario de atención:</strong><br>
+                ALMUERZO: Martes a Domingo<br>
+                CENA: Martes a Domingo<br>
+                CERRADO: Lunes y Jueves
+            </p>
+
+            <p><strong>Estacionamiento:</strong><br>
+                Gratuito detrás del restaurante. Espacios públicos sobre la calle principal.
+            </p>
+
+            <p><strong>Reservas:</strong><br>
+                Hasta 24 hs de anticipación.
+            </p>
+
+            <p><strong>Política general:</strong><br>
+                No se permiten mascotas. La casa se reserva el derecho de admisión.
+            </p>
+        </div>
+    </section>
+
+    <!-- ================= UBICACIÓN ================= -->
+    <section id="ubicacion" class="ubicacion fade-in">
+        <h2>Ubicación</h2>
+        <p>Av. López y Planes 3328, Posadas, Misiones (IESA)</p>
+         <!-- Mapa embebido de Google Maps con la dirección correcta -->
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3540.257420123632!2d-55.89995132466465!3d-27.37405618292951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9457be49849dd89d%3A0x62a7c986ec5c11b6!2sIESA!5e0!3m2!1ses-419!2sar!4v1728780847280!5m2!1ses-419!2sar" 
+        width="100%" 
+        height="350" 
+        style="border:0; border-radius:12px;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+</section>
+
+    <!-- ================= CONTACTO ================= -->
+    <section id="contacto" class="contacto fade-in">
+        <h2>Contacto</h2>
+        <form>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required>
+
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="fade-in">
+        <p>&copy; 2025 Yang's Kitchen | Todos los derechos reservados.</p>
+        <div class="redes">
+            <a href="#">Facebook</a> |
+            <a href="#">Instagram</a> |
+            <a href="#">Twitter</a>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+    <!-- Fade-in automático -->
+    <script>
+        const faders = document.querySelectorAll('.fade-in');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.15 });
+        faders.forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
+

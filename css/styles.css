@@ -1,0 +1,492 @@
+/* ooooita tirando comentario tirando beef aasasd*/
+html, body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    overflow-x: hidden; /* evita el desplazamiento horizontal */
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+/* ==================== RESETEO BÁSICO ==================== */
+
+body {
+    background-color: #fff;
+    color: #333;
+}
+
+/* ==================== HEADER ==================== */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255,255,255,0.9);
+    z-index: 1000;
+    padding: 10px 20px;
+}
+
+/* Contenedor interno del header */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Logo */
+.logo img {
+    height: 80px;
+}
+
+/* ==================== NAVBAR ==================== */
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+}
+
+.navbar a:hover {
+    color: #ff6600;
+}
+
+/* ==================== MENÚ HAMBURGUESA ==================== */
+.hamburguesa {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+    margin-left: 20px; /* separa del logo si lo necesitás */
+}
+
+.hamburguesa span {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+/* ==================== VERSIÓN MÓVIL ==================== */
+@media (max-width: 768px) {
+    .navbar {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        background: #fff;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        border-top: 1px solid #eee;
+        z-index: 999;
+    }
+
+    .navbar.activo {
+        display: flex;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px 0;
+        margin: 0;
+    }
+
+    .hamburguesa {
+        display: flex;
+        position: absolute;
+        right: 20px; /* la empuja a la derecha */
+        top: 20px;
+    }
+
+    .logo img {
+        height: 60px;
+    }
+}
+
+/* ==================== SECCIONES ==================== */
+section {
+    width: 100%;
+    overflow: hidden;
+}
+
+
+
+/* ==================== BANNER ==================== */
+.banner {
+    position: relative;
+    margin-top: 80px;
+}
+
+.banner img,
+.imagen-full img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+}
+section {
+    width: 100%;
+    overflow: hidden;
+}
+
+
+.banner-texto {
+    position: relative;
+    top: 30%;
+    transform: translateY(-50%);
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    border-radius: 8px;
+}
+
+/* ==================== SECCIONES GENERALES ==================== */
+section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 30px;
+}
+
+/* ======== DESTACADOS ======== */
+.destacados {
+    background-color: #fafafa;
+    padding: 60px 20px;
+}
+
+.platos-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.plato {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 320px;
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plato:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.plato .img-container {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.plato img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.plato:hover img {
+    transform: scale(1.05);
+}
+
+.plato h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.plato p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+/* ==================== MENÚ ==================== */
+.menu-categorias {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+/* ================= SOBRE NOSOTROS ================= */
+.sobre-nosotros {
+    background-color: #fff;
+    padding: 100px 20px;
+}
+
+/* ----- Imágenes superiores ----- */
+.imagenes-superiores {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 25px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+}
+
+/* Imagen cuadrada */
+.img-cuadrada {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Imagen rectangular un poco más alta */
+.img-rectangular {
+    width: 400px;
+    height: 440px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* ----- Contenido inferior (logo + texto) ----- */
+.contenido-inferior {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 50px;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Logo del restaurante */
+.logo-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.logo {
+    width: 400px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* Texto de presentación */
+.texto {
+    flex: 1;
+    max-width: 500px;
+}
+
+.texto h2 {
+    font-size: 2.2em;
+    color: #333;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.texto p {
+    font-size: 1.1em;
+    line-height: 1.7em;
+    color: #555;
+    text-align: justify;
+}
+/* ----- Responsividad ----- */
+@media (max-width: 900px) {
+    .imagenes-superiores {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img-cuadrada,
+    .img-rectangular {
+        width: 80%;
+        height: auto;
+    }
+
+    .contenido-inferior {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .texto h2 {
+        text-align: center;
+    }
+
+    .texto p {
+        text-align: justify;
+        max-width: 90%;
+    }
+
+    .logo {
+        width: 220px;
+        margin-bottom: 25px;
+    }
+}
+/* ==================== SECCIÓN FULLSCREEN ==================== */
+.imagen-full {
+    width: 100%;
+    height: 100vh; /* ocupa el alto total de la pantalla */
+    overflow: hidden;
+    position: relative;
+    /* estado inicial para fade-in (oculto) */
+    opacity: 0;
+    transform: translateY(25px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+/* La img interna NO debe tener opacity 0 ni transform que interfiera */
+.imagen-full img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* Clase que activa la animación (se añade desde JS) */
+.imagen-full.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* ==================== RESERVAS ==================== */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    margin: auto;
+}
+
+input, select, textarea, button {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+button {
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e45b00;
+}
+
+/* ======== INFORMACIÓN ADICIONAL ======== */
+.informacion {
+    background-color: #fff;
+    border-top: 1px solid #eee;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.informacion .info-container {
+    max-width: 800px;
+    margin: auto;
+    color: #444;
+    line-height: 1.7;
+}
+
+.informacion h2 {
+    margin-bottom: 20px;
+    color: #222;
+}
+
+.informacion p {
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .platos-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+
+/* ==================== FOOTER ==================== */
+footer {
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+}
+
+footer .redes a {
+    color: #ff6600;
+    text-decoration: none;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+        position: absolute;
+        background-color: #fff;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        border-top: 1px solid #eee;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        padding: 20px 0;
+    }
+
+    .hamburguesa {
+        display: flex;
+    }
+
+    .navbar.activo {
+        display: block;
+    }
+
+    .platos-container, .menu-categorias {
+        flex-direction: column;
+    }
+
+    .banner-texto {
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+}
+
+/* ==================== GENERAL FADE-IN PARA OTRAS SECCIONES ==================== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+  animation: fadeIn 2s ease forwards;
+}
+
+
